@@ -31,10 +31,7 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 .vscode
-yarn.lock
-yarn-error.log
-package-lock.json
-yarn.lock
+
 ############################
 # Packages
 ############################
