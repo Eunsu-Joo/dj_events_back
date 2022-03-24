@@ -54,17 +54,23 @@ module.exports = createCoreController("api::event.event", ({ strapi }) => ({
   },
   async me(ctx) {
     const user = ctx.state.user;
-    console.log(user);
+
     if (!user) {
+      return ctx.badRequest(null, [
+        { message: "No authorization header was found" },
+      ]);
     }
 
     const data = await strapi.db.query("api::event.event").findMany({
-      where: { users_permissions_user: { id: user.id } },
-      populate: ["image"],
+      where: {
+        users_permissions_user: { id: ctx.state.user.id },
+      },
+      populate: "*",
     });
     if (!data) {
       return ctx.notFound();
     }
-    return { data };
+    const res = await this.sanitizeOutput(data, ctx);
+    return res;
   },
 }));
