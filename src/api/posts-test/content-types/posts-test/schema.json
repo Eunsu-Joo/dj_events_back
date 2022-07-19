@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts_tests",
+  "info": {
+    "singularName": "posts-test",
+    "pluralName": "posts-tests",
+    "displayName": "posts-test"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "like": {
+      "type": "biginteger"
+    },
+    "writer": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
