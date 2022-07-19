@@ -18,9 +18,6 @@
     "like": {
       "type": "biginteger"
     },
-    "user": {
-      "type": "string"
-    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -37,16 +34,6 @@
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "posts_tests"
-    },
-    "user_profile": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
     }
   }
 }

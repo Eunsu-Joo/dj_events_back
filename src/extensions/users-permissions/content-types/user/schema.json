@@ -74,6 +74,16 @@
       "relation": "oneToMany",
       "target": "api::posts-test.posts-test",
       "mappedBy": "users_permissions_user"
+    },
+    "user_profile": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
