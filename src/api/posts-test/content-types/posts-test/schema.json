@@ -4,7 +4,8 @@
   "info": {
     "singularName": "posts-test",
     "pluralName": "posts-tests",
-    "displayName": "posts-test"
+    "displayName": "posts-test",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,10 +18,27 @@
     "like": {
       "type": "biginteger"
     },
-    "writer": {
+    "user": {
       "type": "string"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "posts_tests"
+    },
+    "user_profile": {
       "allowedTypes": [
         "images",
         "files",

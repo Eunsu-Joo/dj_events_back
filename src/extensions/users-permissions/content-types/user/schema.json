@@ -68,6 +68,12 @@
       "relation": "oneToMany",
       "target": "api::event.event",
       "mappedBy": "users_permissions_user"
+    },
+    "posts_tests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::posts-test.posts-test",
+      "mappedBy": "users_permissions_user"
     }
   }
 }
