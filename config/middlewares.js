@@ -12,6 +12,12 @@ module.exports = [
           upgradeInsecureRequests: null,
         },
       },
+      gzip: {
+        enabled: true,
+        options: {
+          br: false
+        }
+      }
     },
   },
   "strapi::security",
